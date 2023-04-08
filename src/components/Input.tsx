@@ -21,6 +21,7 @@ const InputContainer = ({
           className="p-1 rounded-sm"
           type="text"
           value={newTaskName}
+          placeholder="Finish this project"
           onChange={(e) => setNewTaskName(e.target.value)}
         />
       </div>

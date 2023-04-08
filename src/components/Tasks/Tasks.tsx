@@ -24,7 +24,7 @@ const Tasks = ({
           />
         ))
       ) : (
-        <span className="text-green-100">No tasks yet!</span>
+        <span className="text-green-100">New tasks will show up here!</span>
       )}
     </div>
   );

@@ -16,6 +16,12 @@ function App() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>, value: string) => {
     e.preventDefault();
+
+    if (value == "" || value == null) {
+      alert('Please enter a task')
+      return
+    }
+
     const newTask = {
       name: value,
       done: false,

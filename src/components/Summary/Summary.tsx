@@ -7,10 +7,10 @@ const Summary = ({ tasks }: { tasks: Task[] }) => {
   const done = tasks.filter((t) => t.done === true).length;
   return (
     <>
-      <div className="flex flex-col gap-1 sm:flex-row sm:justify-between">
-        <SummaryItem itemName={"Total"} itemValue={total} />
+      <div className="flex flex-col gap-1 sm:gap-2 sm:flex-row sm:justify-between">
         <SummaryItem itemName={"To do"} itemValue={pending} />
         <SummaryItem itemName={"Done"} itemValue={done} />
+        <SummaryItem itemName={"Total"} itemValue={total} />
       </div>
     </>
   );

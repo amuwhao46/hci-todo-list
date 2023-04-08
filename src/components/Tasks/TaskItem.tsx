@@ -12,8 +12,8 @@ const TaskItem = ({
   handleDelete: (id: string) => void;
 }) => {
   return (
-    <div className="flex justify-between bg-white p-1 px-3 rounded-sm gap-4">
-      <div className="flex gap-2 items-center">
+    <div className="flex flex-col md:flex-row justify-between bg-white p-1 px-3 rounded-sm md:gap-4">
+      <div className="flex gap-2 items-center mx-auto md:mx-0">
         <input
           type="checkbox"
           checked={done}

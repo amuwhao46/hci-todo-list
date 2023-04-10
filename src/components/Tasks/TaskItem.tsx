@@ -18,11 +18,12 @@ const TaskItem = ({
           type="checkbox"
           checked={done}
           onChange={() => toggleDone(id, !done)}
+          className="form-checkbox bg-gray-200 focus:ring-yellow-300 text-yellow-700 border-none w-5 h-5"
         />
         {name}
       </div>
       <button
-        className="bg-green-200 hover:bg-green-300 rounded-lg p-1 px-3"
+        className="bg-yellow-200 hover:bg-yellow-300 rounded-lg p-1 px-3 transition m-2"
         type="button"
         onClick={() => handleDelete(id)}
       >

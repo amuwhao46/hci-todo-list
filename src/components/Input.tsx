@@ -16,9 +16,9 @@ const InputContainer = ({
       }}
     >
       <div className="flex flex-col">
-        <label className="text-white">Enter your next task:</label>
+        <label className="text-black">Enter your next task:</label>
         <input
-          className="p-1 rounded-sm"
+          className="p-2 rounded-sm"
           type="text"
           value={newTaskName}
           placeholder="Finish this project"
@@ -27,7 +27,7 @@ const InputContainer = ({
       </div>
       <button
         type="submit"
-        className="bg-green-100 rounded-lg hover:bg-green-200 p-1"
+        className="bg-yellow-200 rounded-lg hover:bg-yellow-300 p-1 transition"
       >
         Add task
       </button>

@@ -48,14 +48,15 @@ function App() {
   return (
     <div className="flex justify-center m-5">
       <div className="flex flex-col items-center">
-        <div className="border shadow p-10 flex flex-col gap-10 sm:w-[640px]">
+        <div className="border rounded-lg shadow-lg p-10 flex flex-col gap-10 bg-slate-600 md:w-[800px]">
+        <h1 className="flex justify-center text-4xl text-white font-bold capitalize">To-do list</h1>
           <Container title={"Summary"}>
             <Summary tasks={tasks} />
           </Container>
           <Container>
             <Input handleSubmit={handleSubmit} />
           </Container>
-          <Container title={"Tasks"}>
+          <Container title={"Current Tasks"}>
             <Tasks
               tasks={tasks}
               toggleDone={toggleDoneTask}

@@ -1,15 +1,17 @@
 import { Task } from "../../App";
 import TaskItem from "./TaskItem";
 
+interface TasksProps {
+    tasks: Task[];
+    toggleDone: (id: string, done: boolean) => void;
+    handleDelete: (id: string) => void;
+}
+
 const Tasks = ({
   tasks,
   toggleDone,
   handleDelete,
-}: {
-  tasks: Task[];
-  toggleDone: (id: string, done: boolean) => void;
-  handleDelete: (id: string) => void;
-}) => {
+}: TasksProps) => {
   return (
     <div className="flex flex-col gap-2">
       {tasks.length ? (

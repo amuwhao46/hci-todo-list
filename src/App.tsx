@@ -4,6 +4,7 @@ import Container from "./components/Container";
 import Input from "./components/Input";
 import Summary from "./components/Summary/Summary";
 import Tasks from "./components/Tasks/Tasks";
+import { useHotkeys } from "react-hotkeys-hook";
 
 export interface Task {
   name: string;

@@ -18,7 +18,7 @@ const TaskItem = ({
           type="checkbox"
           checked={done}
           onChange={() => toggleDone(id, !done)}
-          className="form-checkbox bg-gray-200 focus:ring-yellow-300 text-yellow-700 border-none w-5 h-5"
+          className="form-checkbox bg-gray-200 hover:bg-yellow-100 text-yellow-700 border-none w-5 h-5"
         />
         {name}
       </div>

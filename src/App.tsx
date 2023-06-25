@@ -5,6 +5,7 @@ import Input from "./components/Input";
 import Summary from "./components/Summary/Summary";
 import Tasks from "./components/Tasks/Tasks";
 import { useHotkeys } from "react-hotkeys-hook";
+import Footer from "./components/Footer";
 
 export interface Task {
   name: string;
@@ -19,8 +20,8 @@ function App() {
     e.preventDefault();
 
     if (value == "" || value == null) {
-      alert('Please enter a task')
-      return
+      alert("Please enter a task");
+      return;
     }
 
     const newTask = {
@@ -47,26 +48,31 @@ function App() {
   };
 
   return (
-    <div className="flex justify-center m-5">
-      <div className="flex flex-col items-center">
-        <div className="border rounded-lg shadow-lg p-10 flex flex-col gap-10 bg-slate-600 md:w-[800px]">
-        <h1 className="flex justify-center text-4xl text-white font-bold capitalize">To-do list</h1>
-          <Container title={"Summary"}>
-            <Summary tasks={tasks} />
-          </Container>
-          <Container>
-            <Input handleSubmit={handleSubmit} />
-          </Container>
-          <Container title={"Current Tasks"}>
-            <Tasks
-              tasks={tasks}
-              toggleDone={toggleDoneTask}
-              handleDelete={handleDeleteTask}
-            />
-          </Container>
+    <>
+      <div className="h-screen flex justify-center m-5">
+        <div className="flex flex-col items-center">
+          <div className="border rounded-lg shadow-lg p-10 flex flex-col gap-10 bg-slate-600 md:w-[800px]">
+            <h1 className="flex justify-center text-4xl text-white font-bold capitalize">
+              To-do list
+            </h1>
+            <Container title={"Summary"}>
+              <Summary tasks={tasks} />
+            </Container>
+            <Container>
+              <Input handleSubmit={handleSubmit} />
+            </Container>
+            <Container title={"Current Tasks"}>
+              <Tasks
+                tasks={tasks}
+                toggleDone={toggleDoneTask}
+                handleDelete={handleDeleteTask}
+              />
+            </Container>
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 

@@ -16,6 +16,11 @@ export default function Footer({}: Props) {
             okeamuwha.com
           </p>
         </a>
+        <a href="https://github.com/amuwhao46/hci-todo-list" rel="noreferrer" target="_blank">
+          <p className="text-lg transition hover:text-gray-300">
+            Github
+          </p>
+        </a>
       </div>
     </footer>
   );
